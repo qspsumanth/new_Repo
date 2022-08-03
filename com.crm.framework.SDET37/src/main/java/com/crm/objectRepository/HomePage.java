@@ -32,6 +32,9 @@ public class HomePage extends WebDriverUtility{
 	@FindBy(linkText = "Sign Out")
 	private WebElement signoutLnk;
 
+	@FindBy(xpath = "//a[.='Register']")
+	private WebElement registerLnk;
+
 	//initialization
 	public HomePage(WebDriver driver)
 	{
@@ -65,7 +68,12 @@ public class HomePage extends WebDriverUtility{
 		return signoutLnk;
 	}
 
-	
+
+	public WebElement getRegisterLnk() {
+		return registerLnk;
+	}
+
+
 	public void logout(WebDriver driver)
 	{                     
 		mouseOverAnElement(driver, administratorLnk);
